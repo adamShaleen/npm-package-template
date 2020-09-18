@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+build
+screenshots
+.webpack
+.DS_Store
+.vsCode
+/lib

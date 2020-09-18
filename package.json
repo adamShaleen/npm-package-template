@@ -1,0 +1,44 @@
+{
+  "name": "npm-package-template",
+  "version": "1.0.0",
+  "description": "Template repo for publishing a new npm package",
+  "main": "lib/index.js",
+  "types": "lib/bunchodudes.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "golden": "npm install && npm run build && npm run prettier && npm run lint && npm run test:coverage",
+    "lint": "eslint lib/**/*.ts",
+    "prettier": "prettier --config ./.prettierrc --write \"lib/**{*.ts,*.json}\"",
+    "test": "jest --coverage false",
+    "test:coverage": "jest || true",
+    "pub": "npm run publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamShaleen/npm-package-template.git"
+  },
+  "author": "Adam Shaleen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamShaleen/npm-package-template/issues"
+  },
+  "homepage": "https://github.com/adamShaleen/npm-package-template#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
+    "jest-config": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  }
+}
